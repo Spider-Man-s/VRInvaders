@@ -8,3 +8,4 @@ majstor: 5;
 vito: 4;uiui: 0;
 i: 0;
 kopp: 0;
+dino: 0;

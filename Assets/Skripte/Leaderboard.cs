@@ -28,9 +28,9 @@ public class Leaderboard : MonoBehaviour
         if (File.Exists(leaderboardFilePath))
         {
             string[] existingEntries = File.ReadAllLines(leaderboardFilePath);
-            List<string> formattedEntries = new List<string>();
+            List<(string Username, int Score)> leaderboardEntries = new List<(string, int)>();
 
-            int rank = 1;
+
             foreach (string entry in existingEntries)
             {
                 string[] entryParts = entry.Split(':');
@@ -42,13 +42,20 @@ public class Leaderboard : MonoBehaviour
 
                     if (int.TryParse(scoreStr, out int score) && score > 0)
                     {
-                        string formattedEntry = $"{rank}. {username} ..... {score}";
-                        formattedEntries.Add(formattedEntry);
-                        rank++;
+                        leaderboardEntries.Add((username, score));
                     }
                 }
             }
 
+
+            leaderboardEntries.Sort((a, b) => b.Score.CompareTo(a.Score));
+
+            List<string> formattedEntries = new List<string>();
+            for (int i = 0; i < leaderboardEntries.Count; i++)
+            {
+                string formattedEntry = $"{i + 1}. {leaderboardEntries[i].Username} ..... {leaderboardEntries[i].Score}";
+                formattedEntries.Add(formattedEntry);
+            }
 
             board.text = string.Join("\n", formattedEntries);
         }
@@ -68,3 +75,19 @@ public class Leaderboard : MonoBehaviour
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
