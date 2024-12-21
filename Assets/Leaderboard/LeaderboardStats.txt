@@ -9,3 +9,5 @@ vito: 4;uiui: 0;
 i: 0;
 kopp: 0;
 dino: 0;
+uiiii: 0;
+ukkk: 0;
