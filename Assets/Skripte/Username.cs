@@ -44,6 +44,12 @@ public class Username : MonoBehaviour
         }
     }
 
+
+    public void SetUsername()
+    {
+        GameSettings.Username = usernameInput.text;
+    }
+
     private void WriteToLeaderboard(string username, int score)
     {
 

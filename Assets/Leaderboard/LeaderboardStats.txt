@@ -1,13 +1,5 @@
-mawer: 0;
-uiop: 0;
-iu: 0;
 best: 10;
 notsogoo: 3;
 bibi: 9;
 majstor: 5;
-vito: 4;uiui: 0;
-i: 0;
-kopp: 0;
-dino: 0;
-uiiii: 0;
-ukkk: 0;
+vito: 4;
