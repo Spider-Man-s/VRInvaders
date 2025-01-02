@@ -17026,7 +17026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeingHeld: 0
+  BeingHeld: 1
   GrabButton: 2
   Grabtype: 1
   GrabPhysics: 0
@@ -17034,7 +17034,7 @@ MonoBehaviour:
   GrabSpeed: 4
   RemoteGrabbable: 1
   RemoteGrabMechanic: 0
-  RemoteGrabDistance: 2.5
+  RemoteGrabDistance: 1000
   CanDropMidGrab: 0
   ThrowForceMultiplier: 2.5
   ThrowForceMultiplierAngular: 1.5
@@ -17043,13 +17043,13 @@ MonoBehaviour:
   ParentToHands: 0
   ParentHandModel: 1
   SnapHandModel: 1
-  CanBeDropped: 1
+  CanBeDropped: 0
   CanBeSnappedToSnapZone: 1
   ForceDisableKinematicOnDrop: 0
   InstantMovement: 0
   MakeChildCollidersGrabbable: 0
   handPoseType: 0
-  SelectedHandPose: {fileID: 0}
+  SelectedHandPose: {fileID: 11400000, guid: 81d32077fab03174797733285b778e23, type: 2}
   CustomHandPose: 50
   SecondaryGrabBehavior: 0
   TwoHandedPosition: 0
@@ -17072,12 +17072,12 @@ MonoBehaviour:
   ApplyCorrectiveForce: 1
   MoveVelocityForce: 3000
   MoveAngularVelocityForce: 90
-  LastGrabTime: 31.27081
+  LastGrabTime: 1.4550288
   LastRemoteGrabTime: 3.3280597
   LastDropTime: 31.282135
   AddControllerVelocityOnDrop: 1
   collisions: []
-  ActiveGrabPoint: {fileID: 5079543879445171083}
+  ActiveGrabPoint: {fileID: 4468111068312301516}
   SecondaryLookOffset: {x: 0, y: 0, z: 0}
   SecondaryLookAtTransform: {fileID: 0}
   LocalOffsetTransform: {fileID: 0}

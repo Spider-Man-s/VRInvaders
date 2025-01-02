@@ -2,4 +2,5 @@ best: 10;
 notsogoo: 3;
 bibi: 9;
 majstor: 5;
-vito: 4;
+vito: 4;uy: 0;
+tin: 0;

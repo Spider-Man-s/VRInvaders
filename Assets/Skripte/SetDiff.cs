@@ -22,6 +22,28 @@ public class SetDiff : MonoBehaviour
 
     }
 
+    public void SetPistol()
+    {
+        GameSettings.ChosenWeapon = GameSettings.WeaponType.Pistol;
+
+    }
+
+    public void SetRevolver()
+    {
+        GameSettings.ChosenWeapon = GameSettings.WeaponType.Revolver;
+
+    }
+
+    public void SetShotgun()
+    {
+        GameSettings.ChosenWeapon = GameSettings.WeaponType.Shotgun;
+
+    }
+    public void SetRifle()
+    {
+        GameSettings.ChosenWeapon = GameSettings.WeaponType.Rifle;
+
+    }
 
 }
 

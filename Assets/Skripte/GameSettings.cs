@@ -21,8 +21,10 @@ public static class GameSettings
 
     public static Difficulty currentDifficulty = Difficulty.Easy;
 
-    public static string Username = "";
+    public static string Username = "Default";
     public static int Score = 0;
+
+    public static bool HasWeapon = false;
 
     public static WeaponType ChosenWeapon = WeaponType.Pistol;
 }
