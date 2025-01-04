@@ -5,3 +5,4 @@ majstor: 5;
 vito: 4;uy: 0;
 tin: 0;
 u: 0;
+hio: 0;
