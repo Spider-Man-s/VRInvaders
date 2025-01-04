@@ -4,3 +4,4 @@ bibi: 9;
 majstor: 5;
 vito: 4;uy: 0;
 tin: 0;
+u: 0;

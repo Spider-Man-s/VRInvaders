@@ -9,7 +9,7 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private Text timerText;
 
-
+    //CharlieAnim.SetTrigger("start walking");
     private Slider hpSlider;
     private float maxHP = 100f;
     private float currentHP = 100f;
