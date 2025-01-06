@@ -1,10 +1,4 @@
 best: 10;
-notsogoo: 3;
-bibi: 9;
-majstor: 5;
-vito: 4;
-tin: 0;
-u: 0;
-hio: 0;
-mirko: 0;
-mirke: 0;
+uiui: 25;
+humi: 75;
+mio: 75;

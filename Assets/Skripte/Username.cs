@@ -48,6 +48,9 @@ public class Username : MonoBehaviour
     public void SetUsername()
     {
         GameSettings.Username = usernameInput.text;
+        GameSettings.Score = 0;
+        GameSettings.HasWeapon = false;
+        GameSettings.PlayerDeath = false;
     }
 
     private void WriteToLeaderboard(string username, int score)
