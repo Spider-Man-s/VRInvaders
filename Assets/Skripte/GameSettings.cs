@@ -27,4 +27,6 @@ public static class GameSettings
     public static bool HasWeapon = false;
 
     public static WeaponType ChosenWeapon = WeaponType.Pistol;
+
+    public static bool PlayerDeath = false;
 }

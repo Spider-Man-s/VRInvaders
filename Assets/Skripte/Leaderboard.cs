@@ -19,7 +19,11 @@ public class Leaderboard : MonoBehaviour
 
     public void DisplayLeaderboard()
     {
-        title.text = "Leaders";
+        if (title != null)
+        {
+            title.text = "Leaders";
+        }
+
         foreach (GameObject hide in hideThis)
         {
             hide.SetActive(false);
@@ -67,7 +71,11 @@ public class Leaderboard : MonoBehaviour
 
     public void goBack()
     {
-        title.text = "VRInvaders";
+        if (title != null)
+        {
+            title.text = "VRInvaders";
+        }
+
         foreach (GameObject hide in hideThis)
         {
             hide.SetActive(true);

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerUIManager : MonoBehaviour
 {
@@ -54,6 +56,7 @@ public class PlayerUIManager : MonoBehaviour
             UpdateTimerDisplay(countdown);
             yield return null;
         }
+        SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
         UpdateTimerDisplay(0);
 
     }

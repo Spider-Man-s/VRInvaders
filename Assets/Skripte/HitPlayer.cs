@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class HitPlayer : MonoBehaviour
 {
@@ -10,26 +12,24 @@ public class HitPlayer : MonoBehaviour
 
     private void Start()
     {
-        // This will fetch the Animator from the same GameObject 
-        // that this script is attached to
+
         monsterAnimator = GetComponent<Animator>();
     }
 
     public void Hit()
     {
-        // Trigger the animator once
+
         monsterAnimator.SetTrigger("endOfLine");
 
-        // Start the coroutine that deals damage over time
         StartCoroutine(DamageOverTime());
     }
 
     private IEnumerator DamageOverTime()
     {
-        // While the slider has health above 0
+
         while (playerHp.value > 0)
         {
-            // Wait 2 seconds between each damage tick
+
             yield return new WaitForSeconds(1.9f);
 
             if (GameSettings.currentDifficulty == GameSettings.Difficulty.Easy)
@@ -46,7 +46,8 @@ public class HitPlayer : MonoBehaviour
             }
         }
 
-        // Once the loop finishes, HP is <= 0. You can do "death" logic here if needed.
+        GameSettings.PlayerDeath = true;
+        SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
 
     }
 }
