@@ -20,7 +20,7 @@ public class PlayerUIManager : MonoBehaviour
 
     public Coroutine timerCoroutine;
 
-    public void Start()
+    public void StartUI()
     {
 
         playerNameText.text = "Player: " + GameSettings.Username;
@@ -43,7 +43,11 @@ public class PlayerUIManager : MonoBehaviour
 
     public void Update()
     {
-        scoreText.text = "Score: " + GameSettings.Score.ToString();
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + GameSettings.Score.ToString();
+        }
+
     }
 
 

@@ -4,18 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using Dreamteck.Splines;
 using BNG;
+using UnityEngine.SceneManagement;
 public class MonsterSpawner : MonoBehaviour
 {
     public GameObject[] monsterPrefabs;
     public Transform spawnPoint;
     public UnityEngine.UI.Slider playerHpBar;
-
-
     public SplineComputer[] splineComputers;
-
     private SplineFollower follower;
 
+    private Coroutine spawnCoroutine;
 
+    private Scene currentScene;
 
     public void SpawnMonster()
     {
@@ -40,6 +40,56 @@ public class MonsterSpawner : MonoBehaviour
             follower.SetPercent(0.0f);
             follower.follow = true;
 
+        }
+
+    }
+
+    public void SpawnWawe()
+    {
+        currentScene = SceneManager.GetActiveScene();
+
+        if (GameSettings.currentDifficulty == GameSettings.Difficulty.Easy)
+        {
+            spawnCoroutine = StartCoroutine(TimerCoroutine(60f, 2, 5f));
+        }
+        else if (GameSettings.currentDifficulty == GameSettings.Difficulty.Medium)
+        {
+            spawnCoroutine = StartCoroutine(TimerCoroutine(120f, 3, 3.5f));
+        }
+        else if (GameSettings.currentDifficulty == GameSettings.Difficulty.Hard)
+        {
+            spawnCoroutine = StartCoroutine(TimerCoroutine(180f, 4, 2.5f));
+        }
+    }
+
+
+
+    public IEnumerator TimerCoroutine(float time, int monster, float offset)
+    {
+        float countdown = time;
+        while (countdown > 0)
+        {
+            countdown -= Time.deltaTime;
+            for (int i = 0; i < monster; i++)
+            {
+                SpawnMonster();
+                yield return new WaitForSeconds(0.5f);
+            }
+
+            yield return new WaitForSeconds(offset);
+        }
+
+        if (currentScene.name == "FirstLevel")
+        {
+            SceneManager.LoadScene("SecondLevel", LoadSceneMode.Single);
+        }
+        else if (currentScene.name == "SecondLevel")
+        {
+            SceneManager.LoadScene("ThirdLevel", LoadSceneMode.Single);
+        }
+        else if (currentScene.name == "ThirdLevel")
+        {
+            SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
         }
 
     }

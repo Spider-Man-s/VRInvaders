@@ -2,3 +2,6 @@ best: 10;
 uiui: 25;
 humi: 75;
 mio: 75;
+iiii: 400;
+uuuuu: 0;
+you: 0;
