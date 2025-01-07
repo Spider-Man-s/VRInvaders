@@ -17,7 +17,7 @@ public class PlayerUIManager : MonoBehaviour
     private float currentHP = 100f;
 
 
-
+    private Scene currentScene;
     public Coroutine timerCoroutine;
 
     public void StartUI()
@@ -25,6 +25,7 @@ public class PlayerUIManager : MonoBehaviour
 
         playerNameText.text = "Player: " + GameSettings.Username;
         scoreText.text = "Score: " + GameSettings.Score.ToString();
+        currentScene = SceneManager.GetActiveScene();
 
         if (GameSettings.currentDifficulty == GameSettings.Difficulty.Easy)
         {
@@ -60,8 +61,20 @@ public class PlayerUIManager : MonoBehaviour
             UpdateTimerDisplay(countdown);
             yield return null;
         }
-        SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
+
         UpdateTimerDisplay(0);
+        if (currentScene.name == "FirstLevel")
+        {
+            SceneManager.LoadScene("SecondLevel", LoadSceneMode.Single);
+        }
+        else if (currentScene.name == "SecondLevel")
+        {
+            SceneManager.LoadScene("ThirdLevel", LoadSceneMode.Single);
+        }
+        else if (currentScene.name == "ThirdLevel")
+        {
+            SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
+        }
 
     }
     private void UpdateTimerDisplay(float timeRemaining)

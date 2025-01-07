@@ -491,7 +491,7 @@ MonoBehaviour:
   LastRelativeVelocity: 0
   LastDamageForce: 0
   TakeCollisionDamage: 0
-  CollisionDamage: 5
+  CollisionDamage: 0
 --- !u!136 &8479719715073833224
 CapsuleCollider:
   m_ObjectHideFlags: 0

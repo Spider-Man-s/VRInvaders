@@ -79,18 +79,6 @@ public class MonsterSpawner : MonoBehaviour
             yield return new WaitForSeconds(offset);
         }
 
-        if (currentScene.name == "FirstLevel")
-        {
-            SceneManager.LoadScene("SecondLevel", LoadSceneMode.Single);
-        }
-        else if (currentScene.name == "SecondLevel")
-        {
-            SceneManager.LoadScene("ThirdLevel", LoadSceneMode.Single);
-        }
-        else if (currentScene.name == "ThirdLevel")
-        {
-            SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
-        }
 
     }
 }
