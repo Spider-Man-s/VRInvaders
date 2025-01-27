@@ -14,11 +14,6 @@ public class Billboard : MonoBehaviour
 
     private void LateUpdate()
     {
-        // Ensure the canvas faces the camera
-        // Method 1: Directly look at the camera transform
-        // transform.LookAt(mainCameraTransform);
-
-        // Method 2: Look in the direction of the camera's forward
         transform.LookAt(transform.position + camera.forward);
     }
 }

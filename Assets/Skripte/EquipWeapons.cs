@@ -34,13 +34,13 @@ namespace BNG
                 grabberRight.TryRelease();
             }
 
-            // (2) Check which weapon was chosen, then call GrabGrabbable
+
             if (GameSettings.ChosenWeapon == GameSettings.WeaponType.Rifle)
             {
                 Grabbable spawnedWeaponL = Instantiate(ARL, spawnPointL.position, spawnPointL.rotation);
                 Grabbable spawnedWeaponR = Instantiate(ARR, spawnPointR.position, spawnPointR.rotation);
 
-                // Grab the newly spawned objects (not the original prefabs)
+
                 grabberLeft.GrabGrabbable(spawnedWeaponL);
                 grabberRight.GrabGrabbable(spawnedWeaponR);
 

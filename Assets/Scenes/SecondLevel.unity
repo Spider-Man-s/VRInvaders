@@ -2489,6 +2489,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1978387239}
     m_Modifications:
     - target: {fileID: 1513832951954776, guid: c23281b1e17c88046bda7844edc5694f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513832951954776, guid: c23281b1e17c88046bda7844edc5694f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -2523,6 +2527,11 @@ PrefabInstance:
     - target: {fileID: 4120665018684530, guid: c23281b1e17c88046bda7844edc5694f, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.000000015388034
+      objectReference: {fileID: 0}
+    - target: {fileID: 198323926012039596, guid: c23281b1e17c88046bda7844edc5694f,
+        type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198323926012039596, guid: c23281b1e17c88046bda7844edc5694f,
         type: 3}

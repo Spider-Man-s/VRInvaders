@@ -8,9 +8,9 @@ namespace BNG
     public class HPBarController : MonoBehaviour
     {
 
-        public Damageable damageable;  // Reference to your Damagable script
+        public Damageable damageable;
         public UnityEngine.UI.Slider hpSlider;
-        // Reference to the UI Slider
+
         private float maxHP;
 
         private void Start()
@@ -33,22 +33,14 @@ namespace BNG
                 damageable._startingHealth = 200;
                 maxHP = 200;
             }
-            // maxHP = damageable._startingHealth;
+
         }
 
         private void Update()
         {
-            // Get current and max HP from Damagable
             float currentHP = damageable.Health;
-            // float maxHP = damageable._startingHealth;
-
-            // Calculate the percentage (range 0 to 1)
             float hpPercent = currentHP / maxHP;
-
-            // Clamp the percentage to avoid any potential out-of-range errors
             hpPercent = Mathf.Clamp01(hpPercent);
-
-            // Set the Slider value
             hpSlider.value = hpPercent;
         }
     }

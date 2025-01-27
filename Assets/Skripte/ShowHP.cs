@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class ShowHP : MonoBehaviour
 {
 
-    [SerializeField] private Slider mySlider;  // Assign in Inspector
+    [SerializeField] private Slider mySlider;
     [SerializeField] private Text myText;
 
-    // Start is called before the first frame update
     void Start()
     {
         mySlider.onValueChanged.AddListener(UpdateSliderText);

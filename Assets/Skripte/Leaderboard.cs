@@ -83,19 +83,3 @@ public class Leaderboard : MonoBehaviour
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
